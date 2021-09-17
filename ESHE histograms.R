@@ -25,11 +25,11 @@ h <- read.csv(g, header = TRUE, sep = ",")
 head(h)
 dfh <- data.frame(h)
 head(df2)
-active_hist1 <- ggplot(dfh, aes(x=year)) + geom_histogram(binwidth = 10, color = "darkorange4", fill = "darkorange3")
-active_hist1 + labs(title = "Active nomina by year", 
+active_hist10 <- ggplot(dfh, aes(x=year)) + geom_histogram(binwidth = 10, color = "darkorange4", fill = "darkorange3")
+active_hist10 + labs(title = "Active nomina by year", 
              x = "Year", y = "Nomina")
-active_hist2 <- ggplot(dfh, aes(x=year)) + geom_histogram(binwidth = 5, color = "darkorange4", fill = "darkorange3")
-active_hist2 + labs(title = "Active nomina by year", 
+active_hist5 <- ggplot(dfh, aes(x=year)) + geom_histogram(binwidth = 5, color = "darkorange4", fill = "darkorange3")
+active_hist5 + labs(title = "Active nomina by year", 
              x = "Year", y = "Nomina")
 
 p <- curl("https://raw.githubusercontent.com/raneyej/ESHE-2021/main/line4maybe.csv")
