@@ -32,22 +32,6 @@ active_hist2 <- ggplot(dfh, aes(x=year)) + geom_histogram(binwidth = 5, color = 
 active_hist2 + labs(title = "Active nomina by year", 
              x = "Year", y = "Nomina")
 
-j <- curl("https://raw.githubusercontent.com/raneyej/ESHE-2021/main/nominaline.csv")
-k <- read.csv(j, header = TRUE, sep = ",")
-head(k)
-dfk <- data.frame(k)
-head(dfk)
-line1 <- ggplot(dfk, aes(x=year, y =count)) +geom_line() +geom_point() +ylim(0, 10)
-line1
-
-m <- curl("https://raw.githubusercontent.com/raneyej/ESHE-2021/main/line2.csv")
-n <- read.csv(m, header = TRUE, sep = ",")
-head(n)
-dfn <- data.frame(n)
-head(dfn)
-line2 <- ggplot(dfn, aes(x=year, y=count)) +geom_line(color = "darkorange3") +geom_point(color = "darkorange4") +ylim(0, 10) +xlim(1750, 2021)
-line2 + labs(title= "Nomina by year", 
-             x = "Year", y = "Nomina")
 p <- curl("https://raw.githubusercontent.com/raneyej/ESHE-2021/main/line4maybe.csv")
 q <- read.csv(p, header = TRUE, sep = ",")
 head(q)
