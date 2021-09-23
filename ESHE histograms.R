@@ -50,14 +50,3 @@ combo <- ggplot(df, aes(x=year), color = "darkorange4") +
   geom_histogram(binwidth = 5, color = "darkorange4", fill = "darkorange3") +
   geom_line(dft, mapping = aes(x=year, y=decimal), color = "darkorange4", size = 2)
 combo + labs(title = "Combined nomina by year and cumulative nomina", x = "Year", y = "Count") + theme_minimal()
-
-s <- curl("https://raw.githubusercontent.com/raneyej/ESHE-2021/main/line4.csv")
-t <- read.csv(s, header = TRUE, sep = ",")
-head(t)
-dft <- data.frame(t)
-head(dft)
-
-combo <- ggplot(df, aes(x=year), color = "darkorange4") + 
-  geom_histogram(binwidth = 5, color = "darkorange4", fill = "darkorange3") +
-  geom_line(dft, mapping = aes(x=year, y=decimal), color = "darkorange4", size = 2)
-combo + labs(title = "Combined nomina by year and cumulative nomina", x = "Year", y = "Count") + theme_minimal()
