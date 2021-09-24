@@ -24,7 +24,6 @@ g <- curl("https://raw.githubusercontent.com/raneyej/ESHE-2021/main/activenomina
 h <- read.csv(g, header = TRUE, sep = ",")
 head(h)
 dfh <- data.frame(h)
-head(df2)
 active_hist10 <- ggplot(dfh, aes(x=year)) + geom_histogram(binwidth = 10, color = "darkorange4", fill = "darkorange3")
 active_hist10 + labs(title = "Active nomina by year", 
                      x = "Year", y = "Nomina") + theme_minimal()
@@ -38,7 +37,7 @@ head(q)
 dfq <- data.frame(q)
 head(dfq)
 line3 <- ggplot(dfq, aes(x=year, y=count)) + geom_line(color = "darkorange3") + geom_point(color = "darkorange4")
-line3 + labs(title= "Nomina by year", x = "Year", y = "Nomina") + theme_minimal() 
+line3 + labs(title= "Cumulative nomina", x = "Year", y = "Nomina") + theme_minimal() 
 
 s <- curl("https://raw.githubusercontent.com/raneyej/ESHE-2021/main/line4.csv")
 t <- read.csv(s, header = TRUE, sep = ",")
